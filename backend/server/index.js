@@ -9,7 +9,11 @@ import { ChartJSNodeCanvas } from "chartjs-node-canvas";
 import path from 'path';
 
 const app = express();
-app.use(cors());
+app.use(cors({
+        origin: ['https://creativa.onrender.com', 'http://localhost:5173'],
+      credentials: true, //access-control-allow-credentials:true
+      optionSuccessStatus: 200,
+    }));
 app.use(express.json());
 const _dirname = path.resolve();
 app.use(express.static(path.join(_dirname,'/client/my-project/dist')));
