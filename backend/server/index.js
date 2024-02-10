@@ -10,7 +10,7 @@ import path from 'path';
 
 const app = express();
 app.use(cors({
-        origin: ['https://taskcreativa-wrff.vercel.app', 'http://localhost:5173', 'http://localhost:3001'],
+        origin: ['https://taskcreativa-wrff.vercel.app', 'http://localhost:5173', 'https://creativa.onrender.com'],
       credentials: true, //access-control-allow-credentials:true
       optionSuccessStatus: 200,
     }));
